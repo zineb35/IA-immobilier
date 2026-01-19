@@ -1,0 +1,32 @@
+============================================================
+RÉSUMÉ DES RÉSULTATS - MODÉLISATION ML
+============================================================
+
+📊 Modèle retenu : Random Forest Optimisé
+
+📋 PERFORMANCE SUR L'ENSEMBLE DE TEST :
+   - MAE  : 55,936 €
+   - RMSE : 73,602 €
+   - R²   : 0.6211
+
+📋 VALIDATION CROISÉE (5-Fold) :
+   - R² moyen  : 0.0765 ± 0.5166
+   - MAE moyen : 83,842 €
+
+📋 HYPERPARAMÈTRES OPTIMISÉS :
+   - max_depth: 5
+   - min_samples_leaf: 2
+   - min_samples_split: 2
+   - n_estimators: 200
+
+📋 FEATURES UTILISÉES :
+   1. surface_habitable
+   2. n_pieces
+   3. type_batiment_encoded
+   4. vefa_encoded
+   5. loyer_m2_local
+   6. revenu_fiscal_moyen
+   7. surface_par_piece
+   8. is_idf
+   9. latitude
+   10. longitude
