@@ -1,4 +1,4 @@
-# 💰 ESTIMATION DES COÛTS AZURE
+# ESTIMATION DES COÛTS AZURE
 
 ## Déploiement du Modèle ML Immobilier
 
@@ -64,10 +64,10 @@
 **Total Option A : ~20-30 €/mois**
 
 ### 2.3 Avantages
-- ✅ Coût très faible
-- ✅ Auto-scaling
-- ✅ Pas de gestion serveur
-- ✅ Paiement à l'usage
+- Coût très faible
+- Auto-scaling
+- Pas de gestion serveur
+- Paiement à l'usage
 
 ---
 
@@ -99,10 +99,10 @@
 **Total Option B : ~110-150 €/mois**
 
 ### 3.3 Avantages
-- ✅ Performance stable
-- ✅ Haute disponibilité (99.95%)
-- ✅ Pipeline ML intégré
-- ✅ Sécurité renforcée
+- Performance stable
+- Haute disponibilité (99.95%)
+- Pipeline ML intégré
+- Sécurité renforcée
 
 ---
 
@@ -140,133 +140,81 @@
 
 ### 5.2 Liens Azure Calculator
 
-🔗 Accéder à l'Azure Pricing Calculator :  
+Accéder à l'Azure Pricing Calculator :  
 **https://azure.microsoft.com/fr-fr/pricing/calculator/**
 
 Configuration suggérée :
-1. Ajouter "Azure Functions" → Consumption Plan
-2. Ajouter "Storage Account" → Blob Storage Standard
-3. Ajouter "Azure Machine Learning" → Basic
+1. Ajouter "Azure Functions" - Consumption Plan
+2. Ajouter "Storage Account" - Blob Storage Standard
+3. Ajouter "Azure Machine Learning" - Basic
 4. Sélectionner région "France Centre"
 
 ---
 
-## 6. Comparaison des Coûts
+## 6. Comparaison des Options
 
-### 6.1 Tableau Récapitulatif
-
-| Option | Coût/mois | Coût/an | Cas d'usage |
-|--------|-----------|---------|-------------|
-| **A. Minimale** | 25€ | 300€ | POC, tests |
-| **B. Standard** | 130€ | 1,560€ | Production PME |
-| **C. Enterprise** | 500€ | 6,000€ | Grande entreprise |
-
-### 6.2 Évolution des Coûts avec la Charge
-
-| Requêtes/jour | Option A | Option B | Option C |
-|---------------|----------|----------|----------|
-| 100 | 15€ | 110€ | 450€ |
-| 1,000 | 25€ | 130€ | 450€ |
-| 10,000 | 80€ | 200€ | 500€ |
-| 100,000 | 300€ | 500€ | 550€ |
-
-> 💡 **L'Option A devient plus chère que B au-delà de ~50,000 req/jour**
+| Critère | Option A | Option B | Option C |
+|---------|----------|----------|----------|
+| **Coût mensuel** | ~30€ | ~150€ | ~500€ |
+| **Scalabilité** | Auto | Manuelle | Auto |
+| **Disponibilité** | 99.9% | 99.95% | 99.99% |
+| **Complexité** | Faible | Moyenne | Élevée |
+| **MLOps** | Non | Basique | Complet |
+| **Cas d'usage** | POC/Test | Production PME | Enterprise |
 
 ---
 
-## 7. Coûts Cachés à Prévoir
+## 7. Recommandation
 
-### 7.1 Coûts Additionnels
+### Pour ce projet (POC/Démarrage)
+
+**Option A recommandée** : ~30€/mois
+
+Raisons :
+- Dataset petit (100 observations)
+- Volume de requêtes faible attendu
+- Phase de validation du modèle
+- Budget limité
+
+### Évolution future
+
+```
+POC (Option A) → Validation → Production (Option B) → Scale (Option C)
+     30€/mois                      150€/mois              500€/mois
+```
+
+---
+
+## 8. Coûts Cachés à Prévoir
 
 | Poste | Estimation |
 |-------|------------|
-| Support Azure | 0€ (Basic) à 100€/mois (Standard) |
-| Formation équipe | 500€ (one-time) |
-| Développement initial | 2,000-5,000€ |
-| Maintenance annuelle | 10-20% du coût initial |
-
-### 7.2 Optimisations Possibles
-
-| Action | Économie potentielle |
-|--------|----------------------|
-| Reserved Instances (1 an) | -30% |
-| Reserved Instances (3 ans) | -50% |
-| Azure Spot VMs (non-critique) | -60 à -90% |
-| Compression données | -20% stockage |
-| Mise en cache | -50% requêtes |
+| Transfert de données | ~5€/mois |
+| Support Azure | 0€ (Basic) à 100€ (Standard) |
+| Certificats SSL | Inclus App Service |
+| Backup | ~5€/mois |
+| Tests/Dev | +20% du coût prod |
 
 ---
 
-## 8. Recommandation
+## 9. Optimisations Possibles
 
-### 8.1 Phase de Lancement (0-6 mois)
-
-**🎯 Recommandation : Option A (Minimale)**
-
-- Budget : **~30€/mois**
-- Suffisant pour 1,000 estimations/jour
-- Permet de valider l'adoption
-
-### 8.2 Phase de Croissance (6-12 mois)
-
-**🎯 Recommandation : Option B (Standard)**
-
-- Budget : **~150€/mois**
-- Plus de fiabilité et monitoring
-- Pipeline ML pour retraining automatique
-
-### 8.3 Phase Scale (12+ mois)
-
-**🎯 Recommandation : Option C (Enterprise)**
-
-- Budget : **~500€/mois**
-- Multi-région possible
-- SLA 99.99%
+1. **Reserved Instances** : -30% sur App Service (1 an)
+2. **Spot VMs** : -80% pour retraining (interruptible)
+3. **Auto-shutdown** : Environnements de dev
+4. **Tier gratuit** : Exploiter les quotas gratuits
 
 ---
 
-## 9. Estimation Annuelle
+## 10. Récapitulatif
 
-### 9.1 Budget Prévisionnel
-
-| Année | Option | Coût mensuel | Coût annuel | Notes |
-|-------|--------|--------------|-------------|-------|
-| 1 | A puis B | 30€ → 130€ | ~1,000€ | Montée progressive |
-| 2 | B | 150€ | ~1,800€ | Production stable |
-| 3 | B/C | 200€ | ~2,400€ | Évolution si besoin |
-
-### 9.2 ROI Estimé
-
-| Indicateur | Avant ML | Après ML | Gain |
-|------------|----------|----------|------|
-| Temps estimation | 30 min | 5 min | 83% |
-| Coût/estimation | 25€ (agent) | 0.01€ (Azure) | 99.96% |
-| Estimations/jour | 10 | 50+ | 400%+ |
-
-**ROI = (Gain temps × Coût agent) - Coût Azure**
-
-Exemple avec 30 estimations/jour :
-- Économie temps : 30 × 25 min × 0.5€/min = 375€/jour
-- Coût Azure : ~1€/jour
-- **ROI quotidien : ~374€**
+| Budget | Option | Services |
+|--------|--------|----------|
+| < 50€/mois | A - Minimal | Functions + Storage |
+| 100-200€/mois | B - Standard | App Service + ML |
+| > 400€/mois | C - Enterprise | AKS + ML complet |
 
 ---
 
-## 10. Ressources
-
-### 10.1 Liens Utiles
-
-- 📊 [Azure Pricing Calculator](https://azure.microsoft.com/fr-fr/pricing/calculator/)
-- 📖 [Azure ML Pricing](https://azure.microsoft.com/fr-fr/pricing/details/machine-learning/)
-- 📖 [Azure Functions Pricing](https://azure.microsoft.com/fr-fr/pricing/details/functions/)
-- 📖 [Optimisation des coûts Azure](https://docs.microsoft.com/fr-fr/azure/cost-management-billing/)
-
-### 10.2 Azure TCO Calculator
-
-Pour une comparaison avec infrastructure on-premise :  
-🔗 https://azure.microsoft.com/fr-fr/pricing/tco/calculator/
-
----
-
-*Estimation réalisée avec les tarifs Azure France Centre - Janvier 2025*  
-*Les prix peuvent varier selon les promotions et mises à jour Microsoft*
+*Estimation Azure - Projet IA Immobilier*  
+*Version 1.0 - Janvier 2025*

@@ -1,4 +1,4 @@
-# 📊 Guide Tableau Public - Dashboard Immobilier
+# Guide Tableau Public - Dashboard Immobilier
 
 ## 1. Données Préparées
 
@@ -33,32 +33,32 @@ Le fichier `data_tableau.csv` a été exporté avec les colonnes suivantes :
 
 ### Étape 2 : Créer les visualisations recommandées
 
-#### 📈 Viz 1 : Carte des prix par département
+#### Viz 1 : Carte des prix par département
 - Type : Carte (Map)
 - Utiliser `latitude` et `longitude`
 - Couleur : `prix_m2` (dégradé)
 - Taille : `surface_habitable`
 - Tooltip : ville, prix, type_batiment
 
-#### 📊 Viz 2 : Prix réel vs Prix prédit
+#### Viz 2 : Prix réel vs Prix prédit
 - Type : Scatter plot
 - Axe X : `prix`
 - Axe Y : `prix_predit`
 - Ajouter ligne de référence y=x
 - Couleur : `erreur_pct` (divergent)
 
-#### 📊 Viz 3 : Distribution des prix par type
+#### Viz 3 : Distribution des prix par type
 - Type : Box plot ou Histogramme
 - Dimension : `type_batiment`
 - Mesure : `prix`
 
-#### 📊 Viz 4 : Prix moyen par région
+#### Viz 4 : Prix moyen par région
 - Type : Bar chart
 - Dimension : `region`
 - Mesure : AVG(`prix_m2`)
 - Tri : Décroissant
 
-#### 📊 Viz 5 : KPI Cards
+#### Viz 5 : KPI Cards
 - Créer des indicateurs :
   - Prix moyen
   - MAE du modèle : ~56K€
@@ -97,11 +97,11 @@ Le fichier `data_tableau.csv` a été exporté avec les colonnes suivantes :
 ### KPIs Principaux
 | KPI | Valeur | Description |
 |-----|--------|-------------|
-| 📊 Prix moyen | 208,840 € | Moyenne des transactions |
-| 📏 Surface moyenne | 92 m² | Surface habitable moyenne |
-| 🎯 MAE | 55,936 € | Erreur moyenne du modèle |
-| 📈 R² Score | 62.1% | Précision du modèle |
-| 🏠 Nb transactions | 100 | Volume de données |
+| Prix moyen | 208,840 € | Moyenne des transactions |
+| Surface moyenne | 92 m² | Surface habitable moyenne |
+| MAE | 55,936 € | Erreur moyenne du modèle |
+| R² Score | 62.1% | Précision du modèle |
+| Nb transactions | 100 | Volume de données |
 
 ### KPIs par Segment
 - Prix moyen Maisons vs Appartements
@@ -153,5 +153,4 @@ Le fichier `data_tableau.csv` a été exporté avec les colonnes suivantes :
 
 ---
 
-*Fichier : data_tableau.csv*
-*Localisation : Data/raw/data_tableau.csv*
+*Guide Tableau Public - Projet IA Immobilier*

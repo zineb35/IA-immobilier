@@ -1,4 +1,4 @@
-# 🏠 Projet IA Immobilier - Estimation des Prix
+# Projet IA Immobilier - Estimation des Prix
 
 ## Vue d'ensemble
 
@@ -6,20 +6,20 @@ Ce projet développe un modèle de Machine Learning pour estimer les prix immobi
 
 ---
 
-## 🎯 Objectifs du Projet
+## Objectifs du Projet
 
-1. ✅ **Exploration des données** - Analyse complète du marché immobilier
-2. ✅ **Preprocessing** - Nettoyage, enrichissement et feature engineering
-3. ✅ **Modélisation ML** - Comparaison de 5 algorithmes
-4. ✅ **Évaluation** - Métriques et KPIs business
-5. ✅ **Dashboard** - Visualisation Tableau Public
-6. ✅ **Documentation** - Note technique reproductible
-7. ✅ **Conformité** - Analyse RGPD et IA Act
-8. ✅ **Coûts Azure** - Estimation déploiement cloud
+1. **Exploration des données** - Analyse complète du marché immobilier
+2. **Preprocessing** - Nettoyage, enrichissement et feature engineering
+3. **Modélisation ML** - Comparaison de 5 algorithmes
+4. **Évaluation** - Métriques et KPIs business
+5. **Dashboard** - Visualisation Tableau Public
+6. **Documentation** - Note technique reproductible
+7. **Conformité** - Analyse RGPD et IA Act
+8. **Coûts Azure** - Estimation déploiement cloud
 
 ---
 
-## 📊 Résultats Clés
+## Résultats Clés
 
 | Métrique | Valeur |
 |----------|--------|
@@ -31,7 +31,7 @@ Ce projet développe un modèle de Machine Learning pour estimer les prix immobi
 
 ---
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 data ia immobilier/
@@ -47,27 +47,31 @@ data ia immobilier/
 │       └── ...
 │
 ├── N/
-│   ├── exploration.ipynb      # 📊 Notebook EDA
-│   ├── preprocessing.ipynb    # 🔧 Notebook preprocessing
-│   ├── random_forest_model.pkl # 🤖 Modèle entraîné
-│   ├── scaler.pkl             # 📏 StandardScaler
-│   ├── model_results.txt      # 📋 Résultats
-│   ├── evaluation_kpis.md     # 📈 KPIs et métriques
-│   ├── guide_tableau.md       # 📊 Guide Tableau Public
-│   ├── note_technique.md      # 📄 Documentation technique
-│   ├── conformite_rgpd.md     # ⚖️ Conformité légale
-│   ├── estimation_azure.md    # 💰 Coûts Azure
-│   └── *.png                  # 🖼️ Graphiques générés
+│   ├── exploration.ipynb      # Notebook EDA
+│   ├── preprocessing.ipynb    # Notebook preprocessing
+│   ├── random_forest_model.pkl # Modèle entraîné
+│   ├── scaler.pkl             # StandardScaler
+│   ├── model_results.txt      # Résultats
+│   ├── evaluation_kpis.md     # KPIs et métriques
+│   ├── guide_tableau.md       # Guide Tableau Public
+│   ├── note_technique.md      # Documentation technique
+│   ├── conformite_rgpd.md     # Conformité légale
+│   ├── estimation_azure.md    # Coûts Azure
+│   └── *.png                  # Graphiques générés
+│
+├── dashboard/
+│   ├── app.py                 # Dashboard Streamlit
+│   └── requirements.txt       # Dépendances
 │
 ├── test/
-│   └── modelisation.ipynb     # 🧪 Notebook modélisation
+│   └── modelisation.ipynb     # Notebook modélisation
 │
-└── README.md                  # 📖 Ce fichier
+└── README.md                  # Ce fichier
 ```
 
 ---
 
-## 🚀 Guide de Démarrage
+## Guide de Démarrage
 
 ### 1. Prérequis
 
@@ -79,9 +83,11 @@ scikit-learn
 matplotlib
 seaborn
 joblib
+streamlit
+plotly
 ```
 
-### 2. Exécution
+### 2. Exécution des Notebooks
 
 ```bash
 # 1. Exploration
@@ -94,7 +100,15 @@ jupyter notebook N/preprocessing.ipynb
 jupyter notebook test/modelisation.ipynb
 ```
 
-### 3. Utilisation du Modèle
+### 3. Lancer le Dashboard
+
+```bash
+cd dashboard
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+### 4. Utilisation du Modèle
 
 ```python
 import joblib
@@ -125,7 +139,7 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 
 ---
 
-## 📈 Features Importantes
+## Features Importantes
 
 | Rang | Feature | Importance |
 |------|---------|------------|
@@ -137,7 +151,7 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 
 ---
 
-## 📋 Livrables
+## Livrables
 
 | Document | Description |
 |----------|-------------|
@@ -150,10 +164,11 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 | `estimation_azure.md` | Estimation des coûts de déploiement |
 | `guide_tableau.md` | Guide pour créer le dashboard |
 | `data_tableau.csv` | Données prêtes pour Tableau Public |
+| `app.py` | Dashboard Streamlit interactif |
 
 ---
 
-## ⚠️ Limites Connues
+## Limites Connues
 
 - Dataset limité (100 observations)
 - Forte variance en cross-validation
@@ -162,7 +177,7 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 
 ---
 
-## 🔮 Améliorations Futures
+## Améliorations Futures
 
 1. Augmenter le dataset (objectif : 1000+ transactions)
 2. Ajouter features : DPE, année construction, état
@@ -172,7 +187,7 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 
 ---
 
-## 💰 Coûts de Déploiement
+## Coûts de Déploiement
 
 | Option | Coût mensuel | Cas d'usage |
 |--------|--------------|-------------|
@@ -180,6 +195,6 @@ print(f"Prix estimé : {prix_estime:,.0f} €")
 | Standard | ~150€ | Production PME |
 | Enterprise | ~500€ | Grande entreprise |
 
+---
 
-
-
+*Projet IA Immobilier - 2025*

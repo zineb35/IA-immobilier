@@ -1,4 +1,4 @@
-# 📊 ÉVALUATION DU MODÈLE ET DÉFINITION DES KPIs
+# ÉVALUATION DU MODÈLE ET DÉFINITION DES KPIs
 
 ## 1. Objectif Business
 
@@ -33,16 +33,16 @@
 
 | KPI | Objectif | Valeur Actuelle | Statut |
 |-----|----------|-----------------|--------|
-| Précision relative (MAE/Prix moyen) | < 30% | 26.8% | ✅ |
-| R² Score | > 0.60 | 0.62 | ✅ |
-| Erreur max acceptable | < 100K€ (80% des cas) | À vérifier | 🔄 |
+| Précision relative (MAE/Prix moyen) | < 30% | 26.8% | OK |
+| R² Score | > 0.60 | 0.62 | OK |
+| Erreur max acceptable | < 100K€ (80% des cas) | À vérifier | En cours |
 
 ### 3.2 KPIs d'Impact Business
 
 | KPI | Description | Mesure |
 |-----|-------------|--------|
 | **Taux d'adoption** | % d'agents utilisant l'outil | À suivre après déploiement |
-| **Temps d'estimation réduit** | Temps gagné par estimation | Baseline: 30min → Cible: 5min |
+| **Temps d'estimation réduit** | Temps gagné par estimation | Baseline: 30min - Cible: 5min |
 | **Satisfaction client** | NPS des vendeurs | À mesurer |
 | **Précision perçue** | % estimations validées par le marché | À suivre (ventes réalisées vs estimation) |
 
@@ -84,7 +84,7 @@
 
 **Moyenne** : 0.08 ± 0.52
 
-⚠️ **Constat** : Forte variabilité entre les folds due au petit échantillon (100 observations)
+**Constat** : Forte variabilité entre les folds due au petit échantillon (100 observations)
 
 ### Recommandations pour améliorer la stabilité :
 1. Augmenter la taille du dataset (objectif: > 1000 observations)
@@ -110,9 +110,9 @@
 ## 7. Recommandations Business
 
 ### Court terme (0-3 mois)
-1. ✅ Déployer le modèle en mode "aide à la décision"
-2. ✅ Former les agents à interpréter les estimations
-3. ⚠️ Afficher une marge d'erreur avec chaque estimation
+1. Déployer le modèle en mode "aide à la décision"
+2. Former les agents à interpréter les estimations
+3. Afficher une marge d'erreur avec chaque estimation
 
 ### Moyen terme (3-6 mois)
 1. Collecter plus de données de transactions

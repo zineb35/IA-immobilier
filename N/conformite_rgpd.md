@@ -1,4 +1,4 @@
-# 📋 CONFORMITÉ LÉGALE - RGPD & IA
+# CONFORMITÉ LÉGALE - RGPD & IA
 
 ## Document de Conformité - Projet IA Immobilier
 
@@ -24,8 +24,8 @@
 ### 1.2 Catégorisation RGPD
 
 **Données à caractère personnel identifiées** :
-- ✅ Adresses précises des biens
-- ✅ Coordonnées GPS (peuvent identifier un lieu précis)
+- Adresses précises des biens
+- Coordonnées GPS (peuvent identifier un lieu précis)
 
 **Données NON personnelles** :
 - Prix agrégés par zone
@@ -36,9 +36,9 @@
 
 | Source | Base légale | Vérification |
 |--------|-------------|--------------|
-| DVF (Demandes de Valeurs Foncières) | Données publiques (Open Data) | ✅ Légal |
-| INSEE (revenus fiscaux) | Données statistiques agrégées | ✅ Légal |
-| Loyers (CLAMEUR/INSEE) | Données statistiques agrégées | ✅ Légal |
+| DVF (Demandes de Valeurs Foncières) | Données publiques (Open Data) | Légal |
+| INSEE (revenus fiscaux) | Données statistiques agrégées | Légal |
+| Loyers (CLAMEUR/INSEE) | Données statistiques agrégées | Légal |
 
 ---
 
@@ -94,23 +94,23 @@ Seules les données **strictement nécessaires** sont conservées :
 
 ### 4.1 Applicabilité
 
-⚠️ **Important** : Les données DVF étant des données publiques anonymisées, les droits RGPD individuels sont **limités**.
+**Important** : Les données DVF étant des données publiques anonymisées, les droits RGPD individuels sont **limités**.
 
 Cependant, en cas de demande :
 
 | Droit | Applicable | Procédure |
 |-------|------------|-----------|
-| Accès | ⚠️ Limité | Redirection vers data.gouv.fr |
-| Rectification | ❌ Non | Données publiques officielles |
-| Effacement | ❌ Non | Données publiques |
-| Opposition | ⚠️ Limité | Analyse au cas par cas |
-| Portabilité | ❌ Non | Données non collectées directement |
+| Accès | Limité | Redirection vers data.gouv.fr |
+| Rectification | Non | Données publiques officielles |
+| Effacement | Non | Données publiques |
+| Opposition | Limité | Analyse au cas par cas |
+| Portabilité | Non | Données non collectées directement |
 
 ### 4.2 Contact DPO
 
 Pour toute question relative à la protection des données :  
-📧 Email : [dpo@entreprise.fr]  
-📍 Adresse : [Adresse postale]
+Email : [dpo@entreprise.fr]  
+Adresse : [Adresse postale]
 
 ---
 
@@ -122,10 +122,10 @@ Conformément au futur **AI Act européen**, le modèle doit être :
 
 | Exigence | Conformité | Preuve |
 |----------|------------|--------|
-| Explicable | ✅ | Feature importance fournie |
-| Auditable | ✅ | Code source documenté |
-| Non discriminant | ✅ | Pas de données sensibles |
-| Réversible | ✅ | Décision humaine finale |
+| Explicable | Oui | Feature importance fournie |
+| Auditable | Oui | Code source documenté |
+| Non discriminant | Oui | Pas de données sensibles |
+| Réversible | Oui | Décision humaine finale |
 
 ### 5.2 Catégorie de Risque (AI Act)
 

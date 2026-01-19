@@ -1,4 +1,4 @@
-# 📋 NOTE TECHNIQUE - Projet IA Immobilier
+# NOTE TECHNIQUE - Projet IA Immobilier
 
 ## Estimation des Prix Immobiliers par Machine Learning
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Résumé Exécutif
+## Résumé Exécutif
 
 Ce projet vise à développer un modèle de Machine Learning capable d'estimer les prix des biens immobiliers à partir de leurs caractéristiques intrinsèques et de données macroéconomiques. Le modèle Random Forest optimisé atteint une **MAE de 55,936€** et un **R² de 0.62**, permettant d'automatiser les estimations avec une précision acceptable.
 
@@ -162,7 +162,7 @@ param_grid = {
 | 5 | -0.35 |
 | **Moyenne** | **0.08 ± 0.52** |
 
-⚠️ La forte variabilité est due au faible volume de données (100 observations).
+La forte variabilité est due au faible volume de données (100 observations).
 
 ---
 
@@ -189,9 +189,9 @@ param_grid = {
 ## 6. Recommandations
 
 ### 6.1 Court terme (Immédiat)
-1. ✅ Déployer le modèle en mode "aide à la décision"
-2. ✅ Afficher systématiquement l'intervalle de confiance
-3. ⚠️ Validation humaine obligatoire pour prix > 500K€
+1. Déployer le modèle en mode "aide à la décision"
+2. Afficher systématiquement l'intervalle de confiance
+3. Validation humaine obligatoire pour prix > 500K€
 
 ### 6.2 Moyen terme (3-6 mois)
 1. **Augmenter le dataset** : Objectif 1000+ transactions
@@ -242,6 +242,9 @@ data ia immobilier/
 │   ├── random_forest_model.pkl
 │   ├── scaler.pkl
 │   └── model_results.txt
+├── dashboard/
+│   ├── app.py
+│   └── requirements.txt
 ├── test/
 │   └── modelisation.ipynb
 └── README.md
@@ -252,6 +255,7 @@ data ia immobilier/
 1. Exécuter `exploration.ipynb` - Analyse exploratoire
 2. Exécuter `preprocessing.ipynb` - Préparation données
 3. Exécuter `modelisation.ipynb` - Entraînement et évaluation
+4. Lancer `streamlit run dashboard/app.py` - Dashboard
 
 ---
 
@@ -268,6 +272,7 @@ data ia immobilier/
 | `evaluation_kpis.md` | KPIs et métriques |
 | `guide_tableau.md` | Guide Tableau Public |
 | `note_technique.md` | Ce document |
+| `app.py` | Dashboard Streamlit |
 
 ---
 
@@ -284,5 +289,5 @@ Le modèle est opérationnel et peut être déployé en environnement de product
 
 ---
 
-*Document technique - Projet IA Immobilier*
+*Document technique - Projet IA Immobilier*  
 *Version 1.0 - Janvier 2025*
