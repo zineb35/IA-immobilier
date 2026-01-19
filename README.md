@@ -4,6 +4,11 @@
 
 Ce projet développe un modèle de Machine Learning pour estimer les prix immobiliers en France, permettant aux agents immobiliers d'automatiser et d'améliorer leurs estimations.
 
+## Source des Données
+
+Les données utilisées proviennent de Kaggle :  
+**https://www.kaggle.com/datasets/benoitfavier/immobilier-france**
+
 ---
 
 ## Objectifs du Projet

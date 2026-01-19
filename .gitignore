@@ -26,6 +26,7 @@ Thumbs.db
 # Data files (large)
 *.npz
 *.crdownload
+*.csv
 
 # Logs
 *.log
